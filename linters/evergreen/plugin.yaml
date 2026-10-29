@@ -1,0 +1,30 @@
+version: 0.1
+tools:
+  definitions:
+    - name: evergreen
+      runtime: node
+      package: evergreen-deprecation
+      shims: [evergreen]
+      known_good_version: 0.7.1
+lint:
+  definitions:
+    - name: evergreen
+      files: [ALL]
+      tools: [evergreen]
+      description: Finds deprecated packages, end-of-life runtimes, and retired APIs, with sources and migration context
+      commands:
+        - name: scan
+          output: sarif
+          run: evergreen scan ${workspace} --format sarif
+          success_codes: [0]
+          read_output_from: stdout
+          batch: true
+          cache_results: true
+      suggest_if: never
+      direct_configs:
+        - .evergreen.json
+      issue_url_format: https://arminazimi.github.io/evergreen/rules/{}.html
+      known_good_version: 0.7.1
+      version_command:
+        parse_regex: ${semver}
+        run: evergreen --version

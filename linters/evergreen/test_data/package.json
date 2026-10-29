@@ -1,0 +1,7 @@
+{
+  "name": "evergreen-trunk-test",
+  "private": true,
+  "dependencies": {
+    "request": "2.88.2"
+  }
+}

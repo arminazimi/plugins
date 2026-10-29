@@ -40,7 +40,7 @@ trunk check enable {linter}
 
 | Technology      | Linters                                                                                                                                  |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| All             | [codespell], [cspell], [gitleaks], [git-diff-check], [ls-lint], [pre-commit-hooks], [trunk-toolbox], [vale]                              |
+| All             | [codespell], [cspell], [evergreen], [gitleaks], [git-diff-check], [ls-lint], [pre-commit-hooks], [trunk-toolbox], [vale]                 |
 | Ansible         | [ansible-lint]                                                                                                                           |
 | Apex            | [pmd]                                                                                                                                    |
 | Bash            | [shellcheck], [shfmt]                                                                                                                    |
@@ -120,6 +120,7 @@ trunk check enable {linter}
 [dotnet-format]: https://github.com/dotnet/format#readme
 [dustilock]: https://github.com/Checkmarx/dustilock
 [eslint]: https://eslint.org/docs/latest/
+[evergreen]: https://github.com/arminazimi/evergreen#readme
 [flake8]: https://trunk.io/linters/python/flake8
 [git-diff-check]: https://git-scm.com/docs/git-diff
 [gitleaks]: https://trunk.io/linters/security/gitleaks

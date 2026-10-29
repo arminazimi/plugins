@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing linter evergreen test CUSTOM 1`] = `
+{
+  "issues": [
+    {
+      "code": "npm.package.request.deprecated",
+      "column": "1",
+      "file": "package.json",
+      "issueClass": "ISSUE_CLASS_EXISTING",
+      "issueUrl": "https://arminazimi.github.io/evergreen/rules/npm.package.request.deprecated.html",
+      "level": "LEVEL_HIGH",
+      "line": "5",
+      "linter": "evergreen",
+      "message": "request is declared in dependencies as 2.88.2; resolved: not found in a supported lockfile. The package is fully deprecated and no new changes are expected.",
+      "targetType": "ALL",
+    },
+  ],
+  "lintActions": [
+    {
+      "command": "scan",
+      "fileGroupName": "ALL",
+      "linter": "evergreen",
+      "paths": [
+        "package.json",
+      ],
+      "verb": "TRUNK_VERB_CHECK",
+    },
+  ],
+  "taskFailures": [],
+  "unformattedFiles": [],
+}
+`;
